@@ -1,26 +1,43 @@
 package exception;
+import lombok.*;
 import model.Member;
+
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-
-public class Faction {
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class Faction{
+    private static String title;
+    private static String name;
+    private static String requirement;
      public static void addcourse(){
         Member member = new Member();
         System.out.print("[+] Insert title:");
-        member.setTitle(new Scanner(System.in).next());
+        title = new Scanner(System.in).next();
         System.out.print("[+] Insert instructor names:");
-        member.setName(new Scanner(System.in).next());
+        name = new Scanner(System.in).next();
         System.out.print("[+] Insert Course Requirement:");
-        member.setRequirement(new Scanner(System.in).next());
+        requirement = new Scanner(System.in).next();
     }
-    public static int ids(){
+    public static void ids(){
         Random random = new Random();
         int numberOfRandomNumbers = 1;
         int upperBound = 10000;
         for (int i = 0; i < numberOfRandomNumbers; i++) {
           random.nextInt(upperBound);
        }
+    }
+    public static Integer id(){
+        Random random = new Random();
+        int numberOfRandomNumbers = 1;
+        int upperBound = 10000;
+        for (int i = 0; i < numberOfRandomNumbers; i++) {
+            random.nextInt(upperBound);
+        }
         return random.nextInt(upperBound);
     }
 
