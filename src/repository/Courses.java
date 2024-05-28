@@ -25,10 +25,10 @@ public class Courses extends Faction {
         table.addCell("REQUIREMENT",0);
         table.addCell("START DATE",0);
         for(int i=0; i<2; i++){
-            table.addCell(id()+"",i);
-            table.addCell(member.+"",i);
-            table.addCell(member.getName()+"",i);
-            table.addCell(member.getRequirement()+"",i);
+            table.addCell("001",i);
+            table.addCell("Java",i);
+            table.addCell("Borey",i);
+            table.addCell("10-02-2024",i);
             table.addCell(formattedDateTime,i);
         }
         System.out.println(table.render());
